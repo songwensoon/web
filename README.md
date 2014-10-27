@@ -4,3 +4,4 @@ web
 http://haproxy.1wt.eu/download/1.4/doc/configuration.txt
 Stunnel
 MooseFS
+http://www.cnblogs.com/Richardzhu/p/3344676.html
