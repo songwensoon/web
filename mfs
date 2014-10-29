@@ -1,0 +1,16 @@
+2.1 元数据服务器安装
+步骤 1	以root用户登录，分别创建mfs用户和用户组（如果已经有mfs用户，则跳过此步骤）。
+groupadd mfs
+useradd -m mfs  -d /home/mfs -g mfs
+passwd mfs
+步骤 2	切换mfs用户，上传mfs安装包（版本包里的mfs.tar.gz）到mfs主目录并解压。
+su mfs
+cd ~
+tar zxvf mfs.tar.gz
+步骤 3	修改文件权限
+chmod -R 755 /home/mfs/mfs
+步骤 4	启动服务
+ /home/mfs/mfs/sbin/mfsmaster start
+步骤 5	启动cgi监控服务，方便通过页面（http://127.0.0.1:9425/mfs.cgi）直接进行监控
+ /home/mfs/mfs/sbin/mfscgiserv
+-----结束
